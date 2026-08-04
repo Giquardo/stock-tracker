@@ -1,0 +1,4 @@
+sku,name,supplier,category,location,sort_order,unit,par_level,pack_size,order_qty_low,active
+0001,House Blend Coffee Beans 1kg,Acme Roasters,Beverages,Shelf A1,1,bag,10,1,,TRUE
+0002,Oat Milk 1L,Acme Dairy,Beverages,Fridge B2,1,carton,12,6,,TRUE
+0003,Napkins 500pk,City Supplies,Consumables,Shelf C1,1,pack,4,1,2,TRUE
