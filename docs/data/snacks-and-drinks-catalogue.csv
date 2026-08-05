@@ -1,0 +1,61 @@
+sku,name,supplier,category,location,sort_order,unit,par_level,pack_size,order_qty_low,active
+0001,Salted Crisps 150g,Northern Snacks Distribution,Crisps & Chips,Aisle A - Crisps,1,bag,20,12,,TRUE
+0002,Cheese & Onion Crisps 150g,Northern Snacks Distribution,Crisps & Chips,Aisle A - Crisps,2,bag,20,12,,TRUE
+0003,Paprika Crisps 150g,Northern Snacks Distribution,Crisps & Chips,Aisle A - Crisps,3,bag,15,12,,TRUE
+0004,Salt & Vinegar Crisps 150g,Northern Snacks Distribution,Crisps & Chips,Aisle A - Crisps,4,bag,15,12,,TRUE
+0005,Tortilla Chips 200g,Greenfield Grocery Distributors,Crisps & Chips,Aisle A - Crisps,5,bag,12,6,,TRUE
+0006,Pretzels 200g,Greenfield Grocery Distributors,Crisps & Chips,Aisle A - Crisps,6,bag,10,6,,TRUE
+0007,Salted Popcorn 100g,Greenfield Grocery Distributors,Crisps & Chips,Aisle A - Crisps,7,bag,10,12,,TRUE
+0008,Sweet Popcorn 100g,Greenfield Grocery Distributors,Crisps & Chips,Aisle A - Crisps,8,bag,10,12,,TRUE
+0009,Milk Chocolate Bar 100g,Northern Snacks Distribution,Chocolate & Confectionery,Aisle A - Confectionery,1,bar,24,24,,TRUE
+0010,Dark Chocolate Bar 100g,Northern Snacks Distribution,Chocolate & Confectionery,Aisle A - Confectionery,2,bar,18,24,,TRUE
+0011,White Chocolate Bar 100g,Northern Snacks Distribution,Chocolate & Confectionery,Aisle A - Confectionery,3,bar,12,24,,TRUE
+0012,Chocolate Cookies 200g,Northern Snacks Distribution,Chocolate & Confectionery,Aisle A - Confectionery,4,pack,12,6,,TRUE
+0013,Wine Gums 165g,Greenfield Grocery Distributors,Chocolate & Confectionery,Aisle A - Confectionery,5,bag,15,12,,TRUE
+0014,Fruit Pastilles 165g,Greenfield Grocery Distributors,Chocolate & Confectionery,Aisle A - Confectionery,6,bag,15,12,,TRUE
+0015,Liquorice Bag 200g,Greenfield Grocery Distributors,Chocolate & Confectionery,Aisle A - Confectionery,7,bag,10,12,,TRUE
+0016,Mini Chocolate Bars Share Bag,Northern Snacks Distribution,Chocolate & Confectionery,Aisle A - Confectionery,8,bag,10,6,2,TRUE
+0017,Digestive Biscuits 400g,Northern Snacks Distribution,Biscuits & Cookies,Aisle B - Biscuits,1,pack,10,6,,TRUE
+0018,Shortbread Fingers 200g,Northern Snacks Distribution,Biscuits & Cookies,Aisle B - Biscuits,2,pack,8,6,,TRUE
+0019,Oatmeal Cookies 300g,Northern Snacks Distribution,Biscuits & Cookies,Aisle B - Biscuits,3,pack,8,6,,TRUE
+0020,Ginger Snaps 250g,Northern Snacks Distribution,Biscuits & Cookies,Aisle B - Biscuits,4,pack,8,6,,TRUE
+0021,Rich Tea Biscuits 300g,Northern Snacks Distribution,Biscuits & Cookies,Aisle B - Biscuits,5,pack,8,6,,TRUE
+0022,Chocolate Chip Cookies 300g,Northern Snacks Distribution,Biscuits & Cookies,Aisle B - Biscuits,6,pack,10,6,,TRUE
+0023,Salted Peanuts 200g,Greenfield Grocery Distributors,Nuts & Dried Fruit,Aisle B - Nuts,1,bag,12,12,,TRUE
+0024,Mixed Nuts 200g,Greenfield Grocery Distributors,Nuts & Dried Fruit,Aisle B - Nuts,2,bag,12,12,,TRUE
+0025,Cashews 150g,Greenfield Grocery Distributors,Nuts & Dried Fruit,Aisle B - Nuts,3,bag,10,12,,TRUE
+0026,Almonds 200g,Greenfield Grocery Distributors,Nuts & Dried Fruit,Aisle B - Nuts,4,bag,10,12,,TRUE
+0027,Raisins 250g,Greenfield Grocery Distributors,Nuts & Dried Fruit,Aisle B - Nuts,5,bag,8,12,,TRUE
+0028,Trail Mix 200g,Greenfield Grocery Distributors,Nuts & Dried Fruit,Aisle B - Nuts,6,bag,10,12,,TRUE
+0029,Cola Can 330ml,Continental Beverage Supply,Soft Drinks,Aisle C - Soft Drinks,1,can,48,24,,TRUE
+0030,Diet Cola Can 330ml,Continental Beverage Supply,Soft Drinks,Aisle C - Soft Drinks,2,can,36,24,,TRUE
+0031,Lemon-Lime Soda Can 330ml,Continental Beverage Supply,Soft Drinks,Aisle C - Soft Drinks,3,can,24,24,,TRUE
+0032,Orange Soda Can 330ml,Continental Beverage Supply,Soft Drinks,Aisle C - Soft Drinks,4,can,24,24,,TRUE
+0033,Tonic Water Can 330ml,Continental Beverage Supply,Soft Drinks,Aisle C - Soft Drinks,5,can,12,24,,TRUE
+0034,Ginger Ale Can 330ml,Continental Beverage Supply,Soft Drinks,Aisle C - Soft Drinks,6,can,12,24,,TRUE
+0035,Root Beer Can 330ml,Continental Beverage Supply,Soft Drinks,Aisle C - Soft Drinks,7,can,12,24,,TRUE
+0036,Orange Juice 250ml,Continental Beverage Supply,Juices & Smoothies,Aisle C - Juices,1,carton,24,12,,TRUE
+0037,Apple Juice 250ml,Continental Beverage Supply,Juices & Smoothies,Aisle C - Juices,2,carton,24,12,,TRUE
+0038,Multivitamin Juice 250ml,Continental Beverage Supply,Juices & Smoothies,Aisle C - Juices,3,carton,18,12,,TRUE
+0039,Mango Smoothie 250ml,Pinecrest Vending Supply,Juices & Smoothies,Aisle C - Juices,4,bottle,12,6,,TRUE
+0040,Berry Smoothie 250ml,Pinecrest Vending Supply,Juices & Smoothies,Aisle C - Juices,5,bottle,12,6,,TRUE
+0041,Still Water 500ml,Pinecrest Vending Supply,Water,Aisle D - Water,1,bottle,48,24,,TRUE
+0042,Sparkling Water 500ml,Pinecrest Vending Supply,Water,Aisle D - Water,2,bottle,36,24,,TRUE
+0043,Still Water 1.5L,Pinecrest Vending Supply,Water,Aisle D - Water,3,bottle,24,6,,TRUE
+0044,Flavoured Water Lemon 500ml,Pinecrest Vending Supply,Water,Aisle D - Water,4,bottle,18,24,,TRUE
+0045,Flavoured Water Cucumber 500ml,Pinecrest Vending Supply,Water,Aisle D - Water,5,bottle,12,24,,TRUE
+0046,Energy Drink 250ml,Continental Beverage Supply,Energy & Sports Drinks,Aisle D - Energy,1,can,24,24,,TRUE
+0047,Sugar-Free Energy Drink 250ml,Continental Beverage Supply,Energy & Sports Drinks,Aisle D - Energy,2,can,24,24,,TRUE
+0048,Sports Isotonic Drink 500ml,Continental Beverage Supply,Energy & Sports Drinks,Aisle D - Energy,3,bottle,18,12,,TRUE
+0049,Sports Isotonic Drink Orange 500ml,Continental Beverage Supply,Energy & Sports Drinks,Aisle D - Energy,4,bottle,18,12,,TRUE
+0050,Sports Isotonic Drink Berry 500ml,Continental Beverage Supply,Energy & Sports Drinks,Aisle D - Energy,5,bottle,12,12,,TRUE
+0051,Instant Coffee Jar 200g,Harborview Wholesale Foods,Coffee & Tea,Aisle E - Coffee & Tea,1,jar,8,1,,TRUE
+0052,Ground Coffee Bag 250g,Harborview Wholesale Foods,Coffee & Tea,Aisle E - Coffee & Tea,2,bag,10,1,,TRUE
+0053,Coffee Pods Box of 10,Harborview Wholesale Foods,Coffee & Tea,Aisle E - Coffee & Tea,3,box,8,1,,TRUE
+0054,Black Tea Box of 25,Harborview Wholesale Foods,Coffee & Tea,Aisle E - Coffee & Tea,4,box,8,1,,TRUE
+0055,Green Tea Box of 25,Harborview Wholesale Foods,Coffee & Tea,Aisle E - Coffee & Tea,5,box,6,1,,TRUE
+0056,Herbal Tea Box of 20,Harborview Wholesale Foods,Coffee & Tea,Aisle E - Coffee & Tea,6,box,6,1,,TRUE
+0057,Chocolate Milk 250ml,Harborview Wholesale Foods,Dairy & Milk Drinks,Aisle E - Dairy Drinks,1,bottle,18,12,,TRUE
+0058,Strawberry Milk 250ml,Harborview Wholesale Foods,Dairy & Milk Drinks,Aisle E - Dairy Drinks,2,bottle,12,12,,TRUE
+0059,Iced Coffee Drink 250ml,Harborview Wholesale Foods,Dairy & Milk Drinks,Aisle E - Dairy Drinks,3,bottle,12,12,,TRUE
+0060,Yogurt Drink 250ml,Harborview Wholesale Foods,Dairy & Milk Drinks,Aisle E - Dairy Drinks,4,bottle,12,12,,TRUE
