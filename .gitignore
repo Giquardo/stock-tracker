@@ -5,6 +5,9 @@ node_modules/
 dist/
 dist-ssr/
 
+# Synced from docs/data at dev/build time — docs/data is the source of truth
+frontend/public/data/
+
 # Env / secrets
 .env
 .env.local
