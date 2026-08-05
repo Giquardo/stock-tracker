@@ -299,6 +299,7 @@ A note on framing: the value here is almost entirely in step 1, and step 1 needs
 - Price fields and order cost totals
 - Photo attachment per line for damaged or unclear stock
 - Two-level Low status (Low / Very Low) for better ordering without full counts
+- **Catalogue reference images** — a thumbnail per SKU shown on the walk screen, so items can be spotted visually instead of by reading the name. Distinct from the photo-attachment item above (that's a per-check evidence photo; this is a per-item catalogue asset). Not scoped into any v1 phase; note it here so the item schema/import template can add an `image_url` field later without a rework — Dexie schema changes are versioned upgrades per CLAUDE.md conventions, so this is a low-cost addition when it's time.
 
 ---
 
