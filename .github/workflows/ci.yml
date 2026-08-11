@@ -1,4 +1,4 @@
-name: CI
+name: CI & Deploy
 
 on:
   push:
@@ -6,13 +6,12 @@ on:
   pull_request:
     branches: [main]
 
-defaults:
-  run:
-    working-directory: frontend
-
 jobs:
   test-and-build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
     steps:
       - uses: actions/checkout@v4
 
@@ -29,3 +28,27 @@ jobs:
       - run: npm run test
 
       - run: npm run build
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: frontend/dist
+
+  # Only deploys on pushes to main (not PRs), and only after lint/test/build
+  # all pass - a broken build never reaches Netlify. Requires NETLIFY_SITE_ID
+  # and NETLIFY_AUTH_TOKEN repo secrets - see docs/decisions/0002-netlify-hosting.md.
+  deploy:
+    needs: test-and-build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: Deploy to Netlify
+        run: npx --yes netlify-cli deploy --prod --dir=dist
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
