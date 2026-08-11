@@ -20,3 +20,4 @@ Host the production build as a static site on Netlify, deployed automatically vi
 - Adds one more external account dependency (Netlify) and two secrets to keep valid — if the token is ever revoked/expired, deploys fail loudly in Actions (not silently).
 - Netlify's free tier is well within this app's needs (static assets only, no functions, low traffic, single user).
 - This doesn't change ADR 0001: there's still no backend, no database, no server-side logic. Netlify only ever serves the same static files `vite build` already produces for local testing.
+- This also doesn't reopen spec §6.5's no-auth decision. The public URL only serves the static app shell - zero data lives on Netlify. Every device's catalogue/session data lives solely in its own local IndexedDB, gated by that device's OS lock screen. Anyone visiting the URL from a different device just gets an empty app; the tablet's actual data is never reachable through it.
