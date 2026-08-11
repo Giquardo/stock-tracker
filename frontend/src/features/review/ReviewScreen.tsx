@@ -5,15 +5,17 @@ import { useReviewData, type OrderLine, type SupplierGroup } from './useReviewDa
 
 interface ReviewScreenProps {
   onGoToWalk: () => void;
+  onSessionCompleted: () => void;
 }
 
 function slugify(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
-export function ReviewScreen({ onGoToWalk }: ReviewScreenProps) {
+export function ReviewScreen({ onGoToWalk, onSessionCompleted }: ReviewScreenProps) {
   const { sessionId, session, groups, uncheckedCount, totalActiveItems } = useReviewData();
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
+  const [showCompleteConfirm, setShowCompleteConfirm] = useState(false);
 
   const allOrderLines: OrderLine[] = groups.flatMap((group) => group.lines);
   const today = new Date().toLocaleDateString();
@@ -40,9 +42,11 @@ export function ReviewScreen({ onGoToWalk }: ReviewScreenProps) {
     await db.stockChecks.update(sessionId, { checkerLabel: value || null });
   }
 
-  async function completeSession() {
+  async function confirmCompleteSession() {
     if (!sessionId) return;
     await db.stockChecks.update(sessionId, { status: 'completed', completedAt: new Date().toISOString() });
+    setShowCompleteConfirm(false);
+    onSessionCompleted();
   }
 
   function exportGroupCsv(group: SupplierGroup) {
@@ -208,13 +212,46 @@ export function ReviewScreen({ onGoToWalk }: ReviewScreenProps) {
             <button
               type="button"
               className="min-h-12 rounded-lg bg-emerald-600 px-4 text-base font-medium text-white active:bg-emerald-700"
-              onClick={() => void completeSession()}
+              onClick={() => setShowCompleteConfirm(true)}
             >
               Complete session
             </button>
           </div>
         )}
       </div>
+
+      {showCompleteConfirm && (
+        <div
+          className="fixed inset-0 z-20 flex items-center justify-center bg-black/50 print:hidden"
+          onClick={() => setShowCompleteConfirm(false)}
+        >
+          <div
+            className="w-full max-w-sm rounded-2xl bg-white p-5"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <p className="text-lg font-semibold text-slate-900">Complete this session?</p>
+            <p className="mt-2 text-base text-slate-600">
+              This closes the current stock check and starts a fresh, empty walk-through next time you open Walk.
+            </p>
+            <div className="mt-5 flex gap-3">
+              <button
+                type="button"
+                className="min-h-12 flex-1 rounded-lg border border-slate-300 text-base font-medium text-slate-700 active:bg-slate-100"
+                onClick={() => setShowCompleteConfirm(false)}
+              >
+                No, cancel
+              </button>
+              <button
+                type="button"
+                className="min-h-12 flex-1 rounded-lg bg-emerald-600 text-base font-medium text-white active:bg-emerald-700"
+                onClick={() => void confirmCompleteSession()}
+              >
+                Yes, complete
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

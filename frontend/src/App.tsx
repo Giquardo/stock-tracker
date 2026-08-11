@@ -52,7 +52,9 @@ function App() {
       </nav>
 
       {screen === 'walk' && <WalkScreen autoJumpToUnchecked={autoJumpToUnchecked} />}
-      {screen === 'review' && <ReviewScreen onGoToWalk={goToWalkAndJump} />}
+      {screen === 'review' && (
+        <ReviewScreen onGoToWalk={goToWalkAndJump} onSessionCompleted={() => selectTab('walk')} />
+      )}
       {screen === 'import' && (
         <div className="min-h-screen bg-slate-950">
           <ImportScreen />
