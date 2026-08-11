@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '../../db/schema';
 import type { Item, LineStatus, StockCheckLine } from '../../db/types';
@@ -23,7 +23,12 @@ function virtualLine(item: Item, sessionId: string): StockCheckLine {
   };
 }
 
-export function WalkScreen() {
+interface WalkScreenProps {
+  /** Jump straight to the first unchecked item once data has loaded — used when arriving here via the review screen's warning banner. */
+  autoJumpToUnchecked?: boolean;
+}
+
+export function WalkScreen({ autoJumpToUnchecked = false }: WalkScreenProps) {
   const sessionId = useDraftSession();
 
   const items = useLiveQuery(() => db.items.toArray(), []) ?? [];
@@ -130,6 +135,13 @@ export function WalkScreen() {
       });
     }
   }
+
+  const hasAutoJumped = useRef(false);
+  useEffect(() => {
+    if (!autoJumpToUnchecked || hasAutoJumped.current || sortedItems.length === 0) return;
+    hasAutoJumped.current = true;
+    jumpToUnchecked();
+  });
 
   let lastLocation: string | null | undefined;
 
