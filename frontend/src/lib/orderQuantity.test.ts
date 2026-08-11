@@ -44,6 +44,21 @@ describe('calculateOrderQuantity', () => {
     ).toBe(7);
   });
 
+  it('counted_qty overrides even an OK status, per FR-2 "Any, with counted_qty entered"', () => {
+    // A shelf count taken on an OK row that turns out to be below par still
+    // produces a real order quantity - the count is more trustworthy than
+    // the quick visual OK call.
+    expect(
+      calculateOrderQuantity({ status: 'ok', parLevel: 10, packSize: 1, orderQtyLow: null, countedQty: 4 }),
+    ).toBe(6);
+  });
+
+  it('counted_qty on an OK status at or above par still orders nothing', () => {
+    expect(
+      calculateOrderQuantity({ status: 'ok', parLevel: 10, packSize: 1, orderQtyLow: null, countedQty: 12 }),
+    ).toBe(0);
+  });
+
   it('counted_qty above par_level floors at zero, never negative', () => {
     expect(
       calculateOrderQuantity({ status: 'low', parLevel: 10, packSize: 1, orderQtyLow: null, countedQty: 15 }),
